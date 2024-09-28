@@ -1,15 +1,194 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/buttonStyle.css">
+    <link rel="stylesheet" href="styles/textStyle.css">
+    <link rel="stylesheet" href="styles/groupMenuStyle.css">
+    <link rel="stylesheet" href="styles/contactFormStyle.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Test</title>
+
 </head>
-    <body>
-        <main>
-            <div>git init</div>
-        </main>
-    </body>
+<body>
+<main>
+    <section class="groupMenu" id="groupMenuId">
+        <div class="groupMenuContainer" id="groupMenuContainer">
+            <header class="groupMenuHeader">
+                <h2 class="regularText menuTitle">
+                    Группы контактов
+                </h2>
+                <button class="blankButton" id="closeButtonId">
+                    <svg width="24" height="24" fill="none">
+                        <g>
+                            <rect width="24" height="24" fill="#fff" rx="6"/>
+                            <path
+                                    fill="#000"
+                                    d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"
+                                    opacity="0.3"
+                            />
+                        </g>
+                        <defs>
+                            <clipPath id="a">
+                                <rect width="24" height="24" fill="#fff" rx="6"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </button>
+            </header>
+            <div class="contactListGroup">
+                <div class="listContainer">
+                    <ul class="contactList" id="itemListId"></ul>
+                    <div class="inputContainer" id="inputContainerId">
+                        <input id="groupInputId" type="text" placeholder="Введите название" class="inputClass">
+                        <svg
+                                id="closeInputId"
+                                class="trash"
+                                width="38"
+                                height="38"
+                                fill="none"
+                        >
+                            <rect
+                                    width="37"
+                                    height="37"
+                                    x="0.5"
+                                    y="0.5"
+                                    stroke="#000"
+                                    opacity="0.1"
+                                    rx="5.5"
+                            />
+                            <g>
+                                <path
+                                        class="trash-path"
+                                        fill="#000"
+                                        d="M12.667 26.389c0 1.161.95 2.111 2.11 2.111h8.445c1.161 0 2.111-.95 2.111-2.111V13.722H12.667V26.39Zm2.596-7.516 1.489-1.488L19 19.623l2.238-2.238 1.488 1.488-2.238 2.238 2.238 2.238-1.488 1.488L19 22.6l-2.238 2.238-1.488-1.488 2.238-2.238-2.249-2.238Zm7.431-8.317L21.64 9.5h-5.28l-1.056 1.056H11.61v2.11h14.78v-2.11h-3.695Z"
+                                        opacity="0.3"
+                                />
+                            </g>
+                            <defs>
+                                <clipPath id="a">
+                                    <path fill="#fff" d="M6.333 6.333h25.333v25.333H6.333z" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+
+                </div>
+                <div class="controlPanel" >
+                    <button class="transparentButton" id="addInputId">
+                    <span class="regularText colorBlue">
+                        Добавить
+                    </span>
+                    </button>
+                    <button type="button" class="btn btn-primary primaryButton" id="addGroupId">
+                    <span class="regularText">
+                        Сохранить
+                    </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="groupMenu" id="contactMenuId">
+        <div class="groupMenuContainer" id="contactMenuContainer">
+            <header class="groupMenuHeader">
+                <h2 class="regularText menuTitle">
+                    Добовление контакта
+                </h2>
+                <button class="blankButton" id="closeContactButtonId">
+                    <svg width="24" height="24" fill="none">
+                        <g>
+                            <rect width="24" height="24" fill="#fff" rx="6"/>
+                            <path
+                                    fill="#000"
+                                    d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"
+                                    opacity="0.3"
+                            />
+                        </g>
+                        <defs>
+                            <clipPath id="a">
+                                <rect width="24" height="24" fill="#fff" rx="6"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </button>
+            </header>
+            <div class="contactListGroup contactContainer">
+                <form action="" class="contactForm">
+                    <div class="contactFormContainer">
+                        <input class='inputClass fullWidth' type="text" id="fullName" placeholder="Введите ФИО">
+                        <span id="fullNameError" class="error"></span>
+                        <input class='inputClass fullWidth' type="text" id="phoneNumber" placeholder="Введите номер телефона">
+                        <span id="phoneError" class="error"></span>
+                        <select class="form-select " aria-label="Default select example">
+                            <option value="" disabled selected hidden>Выберите вариант</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn btn-primary primaryButton" id="saveContactId">
+                        <span class="regularText">
+                            Сохранить
+                        </span>
+                    </button>
+                </form>
+
+            </div>
+        </div>
+    </section>
+    <header class="header">
+        <nav class="headerContainer">
+            <h1 class="regularText regularText18 title">
+                <svg
+                        width="18"
+                        height="22"
+                >
+                    <path
+                            fill="#005BFE"
+                            d="M1.62.053C1.246.133.94.307.634.61c-.313.31-.48.607-.564.999-.094.443-.093 17.777.002 18.22a2.792 2.792 0 0 0 1.453 1.865c.677.332.103.312 8.524.3 7.532-.012 7.533-.012 7.653-.1.066-.05.16-.142.209-.208l.089-.119V3.177l-.09-.119a1.232 1.232 0 0 0-.208-.207c-.113-.084-.186-.09-1.284-.101l-1.164-.013-.013-1.156C15.23.49 15.223.417 15.14.305a1.233 1.233 0 0 0-.209-.207c-.12-.089-.128-.089-6.58-.096-5.312-.006-6.508.003-6.73.05Zm12.244 1.999v.688H7.908c-6.51 0-6.126.015-6.354-.254a.69.69 0 0 1 .248-1.062c.107-.046 1.235-.057 6.097-.058l5.965-.002v.688ZM9.596 5.557c1.031.217 1.906 1.085 2.124 2.11.415 1.941-1.332 3.676-3.288 3.265a2.805 2.805 0 0 1-1.878-1.444c-.413-.831-.413-1.656 0-2.488.546-1.097 1.817-1.7 3.042-1.443Zm1.646 6.916c1.294.376 2.17 1.252 2.524 2.528.064.228.077.455.077 1.357 0 1.026-.005 1.088-.09 1.201a1.204 1.204 0 0 1-.209.207c-.119.089-.143.09-4.53.09-4.387 0-4.411-.001-4.53-.09-.292-.215-.297-.238-.313-1.236-.015-.988.023-1.353.19-1.841.32-.938 1.172-1.798 2.08-2.103.604-.202.713-.21 2.681-.199 1.62.01 1.896.021 2.12.086Z"
+                    />
+                </svg>
+                Книга контактов
+            </h1>
+            <div class="buttonGroup">
+                <button type="button" class="btn btn-primary primaryButton secondaryButton" id="addContactId">
+                    <span class="regularText">
+                        Добавить контакт
+                    </span>
+                    <svg
+                            width="18"
+                            height="18"
+                    >
+                        <g>
+                            <path
+                                    fill="#fff"
+                                    d="M14.25 9.75h-4.5v4.5h-1.5v-4.5h-4.5v-1.5h4.5v-4.5h1.5v4.5h4.5v1.5Z"
+                            />
+                        </g>
+                        <defs>
+                            <clipPath id="a">
+                                <path fill="#fff" d="M0 0h18v18H0z"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </button>
+                <button id="menuButton" type="button" class="btn btn-primary primaryButton">
+                    <span class="regularText">
+                        Группы
+                    </span>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <section class="sectionContainer">
+        <p class="regularText regularTextOpacity18">Список контактов пуст</p>
+    </section>
+</main>
+
+<script  src="scripts/contactGroups.js"></script>
+</body>
 </html>

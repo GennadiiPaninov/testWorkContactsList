@@ -1,0 +1,30 @@
+.regularText{
+    font-family: 'Arial';
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    text-align: left;
+}
+.regularText14BoldSmall{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.1px;
+    color: black;
+}
+.regularText18{
+    font-size: 18px;
+    line-height: 21.6px;
+    color: #005BFE;
+}
+.regularTextOpacity18{
+    opacity: 30%;
+    font-size: 18px;
+    font-weight: 400;
+}
+.menuTitle{
+    font-size: 18px;
+    line-height: 21.6px;
+}
+.colorBlue{
+    color: #005BFE;
+}

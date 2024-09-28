@@ -1,0 +1,115 @@
+.groupMenu{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    z-index: 3;
+    visibility: hidden;
+    transform: translateZ(-20px);
+    transition: opacity 0.3s ease, transform 0.4s ease;
+}
+.groupMenu.show {
+    visibility: visible;
+    opacity: 1;
+    transform: translateZ(0);
+}
+.groupMenuContainer{
+    width: 312px;
+    height: 100vh;
+    background-color: white;
+    opacity: 1;
+}
+.groupMenuHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1)  ;
+
+    width: 100%;
+    height: 70px;
+    padding: 24px;
+}
+.contactListGroup{
+    width: 100%;
+    height: calc(100% - 70px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.listContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    gap: 16px;
+}
+.contactList{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.groupElement{
+    width: 100%;
+    list-style-type:  none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.titleGroupContainer{
+    width: 100%;
+    height: 100%;
+    padding: 11px 12px;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    border:none;
+}
+.titleGroup{
+
+}
+.deleteGroupButton{
+    border: none;
+    background-color: initial;
+}
+.inputContainer{
+
+    display: none;
+    gap: 12px;
+
+}
+.inputClass{
+    width: 214px;
+    height: 38px;
+    border-radius: 6px;
+    background-color: rgba(0, 0, 0, 0.05);
+    border:none;
+    padding: 11px 12px;
+}
+.inputClass::placeholder{
+    font-family: 'Arial';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.1px;
+    text-align: left;
+
+}
+.controlPanel{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    gap: 12px;
+    padding: 24px;
+}
+.trash{
+    cursor: pointer;
+}
+.trash:hover .trash-path {
+    fill: white; /* Цвет заливки при наведении */
+    opacity: 1;
+}
+.trash:hover rect {
+    stroke: red; /* Цвет обводки при наведении */
+    fill: red;
+    opacity: 1;
+}

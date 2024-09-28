@@ -1,0 +1,17 @@
+.contactContainer{
+    padding:24px;
+}
+.contactForm{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-between;
+}
+.contactFormContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}

@@ -470,12 +470,10 @@ function renderItems() {
                     </div>
                 `;
 
-        // Добавляем аккордеон в контейнер
-        bookOfContactsId.appendChild(accordionItem);
+        bookOfContactsId.appendChild(accordionItem)
     });
 }
 
-// Функция для рендеринга контактов
 function renderContacts(contacts, group) {
 
     return contacts.map(contact => `
@@ -554,7 +552,6 @@ function renderContacts(contacts, group) {
             `).join('')
 }
 
-// Пример функций для удаления и редактирования контактов
 function editContact(title, number, group) {
 
     emitter.emit("editValue", [title, number, group])

@@ -105,11 +105,11 @@
     cursor: pointer;
 }
 .trash:hover .trash-path {
-    fill: white; /* Цвет заливки при наведении */
+    fill: white;
     opacity: 1;
 }
 .trash:hover rect {
-    stroke: red; /* Цвет обводки при наведении */
+    stroke: red;
     fill: red;
     opacity: 1;
 }

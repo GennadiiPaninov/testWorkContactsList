@@ -1,0 +1,29 @@
+.bookOfContactsContainer{
+    margin-top: 126px;
+    width: 60%;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    gap: 24px;
+    z-index: 0;
+}
+
+.contactItemStyle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 0;
+    border-top: 1px solid #8c8a8a;
+}
+.contactsAccordionBody{
+    padding: 0 24px;
+}
+.contactsButtonContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}

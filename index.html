@@ -9,12 +9,14 @@
     <link rel="stylesheet" href="styles/textStyle.css">
     <link rel="stylesheet" href="styles/groupMenuStyle.css">
     <link rel="stylesheet" href="styles/contactFormStyle.css">
+    <link rel="stylesheet" href="styles/bookOfContactsStyle.css">
     <link rel="stylesheet" href="styles/style.css">
     <title>Test</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </head>
 <body>
-<main>
+<main id="mainContentId">
     <section class="groupMenu" id="groupMenuId">
         <div class="groupMenuContainer" id="groupMenuContainer">
             <header class="groupMenuHeader">
@@ -123,12 +125,14 @@
                         <span id="fullNameError" class="error"></span>
                         <input class='inputClass fullWidth' type="text" id="phoneNumber" placeholder="Введите номер телефона">
                         <span id="phoneError" class="error"></span>
-                        <select class="form-select " aria-label="Default select example">
-                            <option value="" disabled selected hidden>Выберите вариант</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
+                        <div class="dropdown">
+                            <button class="inputClass contactGroupSelector" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="toogleButtonDropDownMenu" >
+                               <span id="dropDownMenuTextId">Выберите группу</span>
+                                <div id="dropdownMenuSvgContainerID" ></div>
+                            </button>
+                            <ul class="dropdown-menu dropdownList" id="contactGroupList"></ul>
+                            <span id="dropDownError" class="error"></span>
+                        </div>
                     </div>
                     <button type="button" class="btn btn-primary primaryButton" id="saveContactId">
                         <span class="regularText">
@@ -184,9 +188,26 @@
             </div>
         </nav>
     </header>
-    <section class="sectionContainer">
-        <p class="regularText regularTextOpacity18">Список контактов пуст</p>
+    <section class="sectionContainer" id="groupItemsSectionID">
+
+        <div id="bookOfContactsId" class="bookOfContactsContainer">
+
+        </div>
     </section>
+    <div id="notification" class="notification">
+        <svg
+                width="14"
+                height="14"
+                fill="none"
+        >
+            <path
+                    fill="#52C41A"
+                    d="M7 0a7 7 0 1 0 .001 14.001A7 7 0 0 0 7 0Zm3.023 4.714-3.29 4.563a.497.497 0 0 1-.808 0l-1.948-2.7a.125.125 0 0 1 .101-.199h.733a.5.5 0 0 1 .405.208L6.328 8.13l2.456-3.407a.5.5 0 0 1 .405-.207h.733c.101 0 .16.115.101.198Z"
+            />
+        </svg>
+        <span class="regularText regularText14BoldSmall">Контакт успешно создан</span>
+
+    </div>
 </main>
 
 <script  src="scripts/contactGroups.js"></script>

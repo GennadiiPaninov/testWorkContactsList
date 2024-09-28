@@ -39,3 +39,20 @@
     border: none;
     background-color: initial;
 }
+.withoutEffects{
+    background-color: white!important;
+    border:0 solid white!important;
+    border-radius: 0!important;
+    box-shadow: none!important;
+}
+.pencil:hover{
+
+    stroke: #005BFE;
+    fill: #005BFE;
+    opacity: 1;
+}
+.pencil:hover .pencilPath {
+    stroke: white; /* Цвет обводки при наведении */
+    fill: white;
+    opacity: 1;
+}

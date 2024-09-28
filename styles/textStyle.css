@@ -11,6 +11,7 @@
     line-height: 16.1px;
     color: black;
 }
+
 .regularText18{
     font-size: 18px;
     line-height: 21.6px;
@@ -27,4 +28,11 @@
 }
 .colorBlue{
     color: #005BFE;
+}
+.colorGrey{
+    opacity: 50%;
+    color: black;
+}
+.colorBlack{
+    color: black;
 }
